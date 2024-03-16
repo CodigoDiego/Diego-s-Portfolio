@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Projects from '../components/Projects.astro';
+import Code from '../components/icons/Code.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title="It's Diego's portfolio - Web and Software Developer">
+	<div class="w-full h-15px bg-soft px-5 overflow-hidden" id="head">
+		<h3 class=" animated-text text-accent font-mono text-base font-semibold ">*BREAKING NEWS* Im looking for a job! ... And thats pretty much it for the news!    ---- *ANNOUNCEMENT*   Soon there will be a BLOG section where i'll go on detail on every project i've done and the ones that are in development --- QUOTES OF THE WEEK: "Javascript is my mother tongue" - Ghandi (probably, i don't really know)  |  "It's not a bug, it's a feature" - Me but probably someone else said it befor"</h3>
+	</div>
+	<div id="navbar">
+		<Navbar/>
+	</div>
+	<main class="w-full md:w-7/12 m-auto " id="about-me">
+		<div>
+			<AboutMe/>
+		</div>
+		<div class="w-full border-solid border-2 border-bg-2 mt-12 px-8 py-4 bg-bg-light">
+			<div class="flex space-x-3">
+				<Code class="size-12"/><h2 class="text-bg text-4xl font-bold" >Projects</h2>
+			</div>
+			<div class="border-solid border-2 border-disabled-soft mt-4"></div>
+			<div class="flex flex-wrap items-center w-full"  id="projects">
+				<Projects class="m-auto mb-5"/>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		margin-top: 4.2em;
+		padding: 1rem;
+		box-sizing: border-box;
+		max-width: calc(100% - 2rem);
+		color: white;
+		/* background-color: aqua; */
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	html{
+		color-scheme: dark light;
+	}
+</style>

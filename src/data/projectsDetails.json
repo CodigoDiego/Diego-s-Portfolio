@@ -1,0 +1,16 @@
+[
+    {
+    "id": 1,
+    "img": "kairos.png",
+    "name": "Kairos Real State",
+    "description": "This is a React app made to put to the test my skills on react and the use of some tools while also having a deep focus on it's design.",
+    "tags": ["React","React-router", "JSON", "EmailJS","Toast Containers"]
+    },
+    {
+    "id": 2,
+    "img": "kairos.png",
+    "name": "Meteoropolis",
+    "description": "This is a news and weather react-app, made to test the implementation of APIs, use of hooks and states.",
+    "tags": ["React","NewsAPI", "WeatherAPI"]
+    }
+]
