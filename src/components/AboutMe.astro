@@ -15,13 +15,14 @@ import File from './icons/File.astro'
 import User from './icons/User.astro'
 import PillsContact from '../components/PillsContact.astro';
 import Resume from '../files/Resume.pdf'
+import Picture from '../assets/MyPicture.png';
 ---
 
-<div class="lg:flex md:block overflow-visible lg:flex-none select-none">
-    <div class="abMe w-full h-[18em] md:h-[20em] md:w-4/5 bg-bg-light py-5 md:py-0 px-10 border-solid border-2 border-bg-2 font-mono text-bg lg:flex flex-none items-center overflow-visible shadow-lg rounded-md">
+<div class="container lg:flex md:block overflow-visible lg:flex-none select-none">
+    <div class="abMe w-[70vw h-[18em] md:h-[20em] md:w-4/5 lg:w-10/12 bg-bg-light py-5 md:py-0 px-10 border-solid border-2 border-bg-2 font-mono text-bg lg:flex flex-none items-center overflow-visible shadow-lg rounded-md">
         <div class="text px-5">
             <h1 class="text-2xl md:text-6xl text-soft font-medium">Hey!</h1>
-            <h2 class="text-[2em] md:text-8xl font-extrabold tracking-tight">I'm Diego</h1>
+            <h2 class="text-[2.1em] md:text-8xl font-extrabold tracking-tight">I'm Diego</h1>
             <h2 class="md:text-2xl font-light text-bg-2 tracking-tight">software developer</h2>
             <div class="w-3/5 md:w-full mt-3">
                 <nav class="flex flex-wrap items-center md:space-x-2 ">
@@ -39,7 +40,7 @@ import Resume from '../files/Resume.pdf'
         </div>
     </div>
     <div class="flex-none">
-        <img class="img transition duration-300 ease-in-out hover:scale-110 mt-[-5.5em] md:ml-[-16em] md:mt-0 " src="../../src/images/MyPicture.png"/>
+        <img class="img transition duration-300 ease-in-out hover:scale-110 mt-[-5.5em] md:ml-[-16em] md:mt-0 " src={Picture.src}/>
     </div>
 </div>
 
@@ -60,19 +61,19 @@ import Resume from '../files/Resume.pdf'
 </div>
 
 <div class="w-full flex mt-10">
-    <div class="w-1/5 h-24 mr-[-2] flex items-center justify-center text-center  bg-bg py-2 m-auto">
+    <div class=" skills-container w-1/5 h-24 lg:h-28 mr-[-2] flex flex-wrap items-center justify-center text-center  bg-bg py-2 m-auto">
         <h1 class="text-base md:text-3xl font-bold tracking-wider text-bg-light">My skills</h1>
     </div>
-    <div class="w-4/5 h-24 px-2 md:px-6 bg-soft mt-[-10] flex space-x-1 lg:space-x-14 md:space-x-2 items-center justify-center m-auto z-10">
-        <Html class="size-10 md:size-12 transition duration-300 ease-in-out hover:scale-125"/>
-        <Css class="size-10 md:size-12 transition duration-300 ease-in-out hover:scale-125" />
-        <Js class="size-10 md:size-12 transition duration-300 ease-in-out hover:scale-125" />
-        <React class="size-10 md:size-12 transition duration-300 ease-in-out hover:scale-125"/>
-        <AstroIcon class="size-10 md:size-12 transition duration-300 ease-in-out hover:scale-125"/>
-        <Tailwind class="size-10 md:size-12 transition duration-300 ease-in-out hover:scale-125"/>
-        <Git class="size-10 md:size-12 transition duration-300 ease-in-out hover:scale-125"/>
-        <Wp class="size-10 md:size-12 transition duration-300 ease-in-out hover:scale-125"/>
-        <Ps class="size-10 md:size-12 transition duration-300 ease-in-out hover:scale-125"/>
+    <div class="skills-container w-4/5 h-24 lg:h-28 px-3 md:px-6 md:py-2 bg-soft mt-[-10] flex flex-wrap space-x-1 md:space-x-10 lg:space-x-6 items-center md:justify-around lg:justify-center m-auto z-10">
+        <Html class=" icon size-8 md:size-12 lg:size-14 transition duration-300 ease-in-out hover:scale-125"/>
+        <Css class=" icon size-8 md:size-12 lg:size-14 transition duration-300 ease-in-out hover:scale-125" />
+        <Js class="icon size-8 md:size-12 lg:size-14 transition duration-300 ease-in-out hover:scale-125" />
+        <React class="icon size-8 md:size-12 lg:size-14 transition duration-300 ease-in-out hover:scale-125"/>
+        <AstroIcon class="icon size-8 md:size-12 lg:size-14 transition duration-300 ease-in-out hover:scale-125"/>
+        <Tailwind class="icon size-8 md:size-12 lg:size-14 transition duration-300 ease-in-out hover:scale-125"/>
+        <Git class="icon size-8 md:size-12 lg:size-14 transition duration-300 ease-in-out hover:scale-125"/>
+        <Wp class="icon size-8 md:size-12 lg:size-14 transition duration-300 ease-in-out hover:scale-125"/>
+        <Ps class="icon size-8 md:size-12 lg:size-14 transition duration-300 ease-in-out hover:scale-125"/>
     </div>
 </div>
 
@@ -80,7 +81,6 @@ import Resume from '../files/Resume.pdf'
     .img{
         width: 45em;
     }
-
     h1{
         margin-bottom: -0.2em;
     }
@@ -89,5 +89,41 @@ import Resume from '../files/Resume.pdf'
     }
     .text{
         font-family: "Onest Variable";
+    }
+    .skills-container{
+        height: 10vh;
+    }
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1200px)  
+    {
+        .abMe{
+            width: 100%;
+            height: 20em;
+            padding: 2em;
+        }
+        .img{
+            margin: auto;
+            margin-top: -12vh;
+        }
+        .skills-container{
+            gap: 1em;
+        }
+    }
+    @media only screen and (min-device-width :1000px ) and (max-device-width : 1090px)  
+    {
+        .abMe{
+            width: 100%;
+            height:40vh;
+            padding: 4em;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .container{
+            display: block;
+        }
+        .img{
+            margin: auto;
+            margin-top: -18vh;
+        }
     }
 </style>

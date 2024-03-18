@@ -13,11 +13,11 @@ import Navbar from '../components/Navbar.astro';
 	<div id="navbar">
 		<Navbar/>
 	</div>
-	<main class="w-full md:w-7/12 m-auto " id="about-me">
+	<main class="w-full md:w-8/12 lg:w-4/5 m-auto " id="about-me">
 		<div>
 			<AboutMe/>
 		</div>
-		<div class="w-full border-solid border-2 border-bg-2 mt-12 px-8 py-4 bg-bg-light">
+		<div style="padding-bottom: 1.5em;" class="w-full border-solid border-2 border-bg-2 mt-12 px-8 py-4 bg-bg-light mb-8">
 			<div class="flex space-x-3">
 				<Code class="size-12"/><h2 class="text-bg text-4xl font-bold" >Projects</h2>
 			</div>
@@ -52,5 +52,12 @@ import Navbar from '../components/Navbar.astro';
 	}
 	html{
 		color-scheme: dark light;
+		user-select: none;
+	}
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1200px)  
+	{
+		main{
+			width: 90%;
+		}
 	}
 </style>

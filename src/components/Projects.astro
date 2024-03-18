@@ -1,10 +1,12 @@
 ---
-import bg from '../../public/Media/bg.png';
+import bg from '../assets/bg.png';
+import kairos from '../assets/kairos.png';
+import meteoro from '../assets/meteoro.png';
 
 const PROJECTS = [
 {
     id: 1,
-    img: "kairos.png",
+    img: kairos,
     name: "Kairos Real State 🏡",
     description: "This is a React app made to put to the test my skills on react and the use of some tools while also having a deep focus on it's design.",
     url:"https://kairosrealestate.netlify.app",
@@ -12,7 +14,7 @@ const PROJECTS = [
     },
     {
     id: 2,
-    img: "meteoro.png",
+    img: meteoro,
     name: "Meteoropolis 🌤️",
     url:"https://meteoropolis.netlify.app",
     description: "This is a news and weather react-app, made to test the implementation of APIs, use of hooks and states.",
@@ -23,12 +25,12 @@ const PROJECTS = [
 {
 
     PROJECTS.map(({name, description, url, tags, img})=>(
-        <a href={url} target="_blank" >
-        <article class="text-bg text-justify mt-8 w-full md:flex items-center justify-center space-x-8">
-            <div id="bg" class=" bg-[url('../../src/images/bg.png')] object-scale-down overflow-hidden w-full md:w-2/5 rounded-md">
-                <img class="hover:scale-110 transition" src={`../../src/images/${img}`} alt="Project photo"/>
+        <a class=" px-0" href={url} target="_blank" >
+        <article class="text-bg mt-8 w-full md:flex items-center justify-center space-x-8">
+            <div id="bg" style={{backgroundImage: `url(${bg.src})`}} class="object-scale-down overflow-hidden w-full md:w-2/5 rounded-md">
+                <img class="hover:scale-110 transition" src={img.src} alt="Project photo"/>
             </div>
-            <div class="w-3/5">
+            <div class="w-4/5">
                 <h3 class="font-bold text-3xl lg:text-5xl mb-4 ">{name}</h3>
                 <p>{description}</p>
                 <ul class="flex flex-wrap md:space-x-4 mt-5">
@@ -40,4 +42,3 @@ const PROJECTS = [
         </a>
     ))
 }
-
